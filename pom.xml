@@ -10,11 +10,11 @@
         <version>2.6.1</version>
         <relativePath/>
     </parent>
-    <groupId>com.github.opencloud</groupId>
-    <artifactId>open-cloud-dependencies</artifactId>
+    <groupId>com.github.smartcloud</groupId>
+    <artifactId>smart-cloud-dependencies</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>open-cloud-dependencies</name>
-    <description>OpenCloud云服务外部依赖管理</description>
+    <name>smart-cloud-dependencies</name>
+    <description>SmartCloud云服务外部依赖管理</description>
     <packaging>pom</packaging>
 
     <properties>
@@ -69,22 +69,16 @@
         <cglib.version>3.3.0</cglib.version>
 
         <pagehelper.version>5.3.0</pagehelper.version>
-
-
         <sureness.version>1.0.5</sureness.version>
-
-
         <guice.version>5.0.1</guice.version>
         <guava.version>31.0.1-jre</guava.version>
         <mybatis-mate.version>1.0.18</mybatis-mate.version>
         <netty.version>4.1.58.Final</netty.version>
         <redisson.version>3.16.4</redisson.version>
-
         <protobuf-java.version>3.19.1</protobuf-java.version>
-
         <mapstruct.version>1.5.0.Beta1</mapstruct.version>
         <ttl.version>2.13.0-Beta1</ttl.version>
-
+        <asyncload.version>1.0.0</asyncload.version>
     </properties>
 
 
@@ -810,14 +804,14 @@
                     </exclusion>
                     <exclusion>
                         <groupId>org.redisson</groupId>
-                        <artifactId>redisson-spring-data-26</artifactId>
+                        <artifactId>redisson-spring-data-25</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
 
             <dependency>
                 <groupId>org.redisson</groupId>
-                <artifactId>redisson-spring-data-25</artifactId>
+                <artifactId>redisson-spring-data-26</artifactId>
                 <version>${redisson.version}</version>
             </dependency>
 
@@ -869,6 +863,12 @@
                 <version>${spring-boot-admin.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.alibaba.asyncload</groupId>
+                <artifactId>asyncload</artifactId>
+                <version>${asyncload.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -893,7 +893,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-        <repository>
+<!--        <repository>
             <id>rdc-releases</id>
             <url>https://packages.aliyun.com/maven/repository/2022020-release-dkLtZC/</url>
             <releases>
@@ -912,7 +912,7 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-        </repository>
+        </repository>-->
     </repositories>
 
     <pluginRepositories>
@@ -936,7 +936,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </pluginRepository>
-        <pluginRepository>
+<!--        <pluginRepository>
             <id>rdc-releases</id>
             <url>https://packages.aliyun.com/maven/repository/2022020-release-dkLtZC/</url>
             <releases>
@@ -955,11 +955,11 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-        </pluginRepository>
+        </pluginRepository>-->
     </pluginRepositories>
 
     <distributionManagement>
-        <repository>
+<!--        <repository>
             <id>rdc-releases</id>
             <name>ReleasesProxy</name>
             <url>https://packages.aliyun.com/maven/repository/2022020-release-dkLtZC/</url>
@@ -968,7 +968,7 @@
             <id>rdc-snapshots</id>
             <name>SnapshotsProxy</name>
             <url>https://packages.aliyun.com/maven/repository/2022020-snapshot-3D7bcq/</url>
-        </snapshotRepository>
+        </snapshotRepository>-->
     </distributionManagement>
 
     <build>
