@@ -893,7 +893,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-<!--        <repository>
+        <repository>
             <id>rdc-releases</id>
             <url>https://packages.aliyun.com/maven/repository/2022020-release-dkLtZC/</url>
             <releases>
@@ -912,7 +912,29 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-        </repository>-->
+        </repository>
+        <repository>
+            <id>markapple-maven-release</id>
+            <name>maven-nexus-release</name>
+            <url>https://markapple-maven.pkg.coding.net/repository/maven/release/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>markapple-maven-snapshot</id>
+            <name>maven-nexus-snapshot</name>
+            <url>https://markapple-maven.pkg.coding.net/repository/maven/snapshot/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
     </repositories>
 
     <pluginRepositories>
@@ -936,7 +958,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </pluginRepository>
-<!--        <pluginRepository>
+        <pluginRepository>
             <id>rdc-releases</id>
             <url>https://packages.aliyun.com/maven/repository/2022020-release-dkLtZC/</url>
             <releases>
@@ -955,11 +977,28 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-        </pluginRepository>-->
+        </pluginRepository>
     </pluginRepositories>
 
+
+
+    <!--tencent-nexus-->
     <distributionManagement>
-<!--        <repository>
+        <snapshotRepository>
+            <id>markapple-maven-snapshot</id>
+            <name>maven-nexus-snapshot</name>
+            <url>https://markapple-maven.pkg.coding.net/repository/maven/snapshot/</url>
+        </snapshotRepository>
+        <repository>
+            <id>markapple-maven-release</id>
+            <name>maven-nexus-release</name>
+            <url>https://markapple-maven.pkg.coding.net/repository/maven/release/</url>
+        </repository>
+    </distributionManagement>
+
+<!--aliyun-nexus-->
+<!--    <distributionManagement>
+        <repository>
             <id>rdc-releases</id>
             <name>ReleasesProxy</name>
             <url>https://packages.aliyun.com/maven/repository/2022020-release-dkLtZC/</url>
@@ -968,8 +1007,8 @@
             <id>rdc-snapshots</id>
             <name>SnapshotsProxy</name>
             <url>https://packages.aliyun.com/maven/repository/2022020-snapshot-3D7bcq/</url>
-        </snapshotRepository>-->
-    </distributionManagement>
+        </snapshotRepository>
+    </distributionManagement>-->
 
     <build>
         <resources>
